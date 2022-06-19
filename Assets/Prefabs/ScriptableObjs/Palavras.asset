@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 323d4a8131bec2d488f375c2ef8c0f40, type: 3}
+  m_Name: Palavras
+  m_EditorClassIdentifier: 
+  loadWordListPathF: Assets/Lista de Palavras/ListaFacil.txt
+  loadWordListPathM: Assets/Lista de Palavras/ListaMedia.txt
+  loadWordListPathD: Assets/Lista de Palavras/ListaDificil.txt
+  estadoJogo: {fileID: 11400000, guid: b8ba63e90e5bdaf42abd5ec182f5613b, type: 2}

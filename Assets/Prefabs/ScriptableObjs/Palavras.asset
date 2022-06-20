@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323d4a8131bec2d488f375c2ef8c0f40, type: 3}
   m_Name: Palavras
   m_EditorClassIdentifier: 
-  loadWordListPathF: Assets/Lista de Palavras/ListaFacil.txt
-  loadWordListPathM: Assets/Lista de Palavras/ListaMedia.txt
-  loadWordListPathD: Assets/Lista de Palavras/ListaDificil.txt
+  loadWordListPathF: /Lista de Palavras/ ListaFacil.txt
+  loadWordListPathM: /Lista de Palavras/ListaMedia.txt
+  loadWordListPathD: /Lista de Palavras/ListaDificil.txt
   estadoJogo: {fileID: 11400000, guid: b8ba63e90e5bdaf42abd5ec182f5613b, type: 2}

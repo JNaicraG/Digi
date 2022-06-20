@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class ControladorJogo : MonoBehaviour
@@ -38,20 +39,38 @@ public class ControladorJogo : MonoBehaviour
     public Palavras controlarPalavras;
     public EstadoDoJogo estadoDoJogo;
     public ListaBlocosPeças listaBP;
+    public Pontuaçao pontuaçao;
 
     //Menus
     public GameObject menuVitoria,menuGeral;
 
+
     private void Start()
     {
+        ContarTempo();
         ResetarEstadosDoJogo();
-        controlarPalavras.CarregarPalavrasMedias();
+        //controlarPalavras.CarregarPalavrasMedias();
     }
 
     private void Update()
     {
         VerificarBlocos();
         VerificarEstadoDoJogo();
+    }
+    /*
+    public void AcabarJogo()
+    {
+        if (estadoDoJogo.jogoAcabou)
+        {
+            ControladorJogo.Instance.ResetarEstadosDoJogo();
+            pontuaçao.SalvarPontuaçao();
+            SceneManager.LoadScene(sceneBuildIndex: 0);
+        }
+    }*/
+
+    private void ContarTempo()
+    {
+        pontuaçao.tempo += Time.time;
     }
 
     private void VerificarEstadoDoJogo()

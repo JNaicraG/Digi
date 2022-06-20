@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cbcb5ad36f713f40989e7c0ae6debc5, type: 3}
   m_Name: "Configura\xE7\xE3o"
   m_EditorClassIdentifier: 
+  nomeJogador: 
+  volume: 0
+  indexFonteTamanho: 0
+  audioMixer: {fileID: 24100000, guid: a1754fde17e25904bad07ae7a06096b6, type: 2}

@@ -893,6 +893,7 @@ GameObject:
   - component: {fileID: 432682190}
   - component: {fileID: 432682189}
   - component: {fileID: 432682188}
+  - component: {fileID: 432682191}
   m_Layer: 5
   m_Name: "Menu Configura\xE7\xE3o"
   m_TagString: Untagged
@@ -983,6 +984,22 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &432682191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432682186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9b1728e8b685d4cbf817ac0c71473c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "menuConfigura\xE7ao": {fileID: 432682186}
+  menuInicial: {fileID: 1094739455}
+  audioMixer: {fileID: 24100000, guid: a1754fde17e25904bad07ae7a06096b6, type: 2}
+  "configura\xE7ao": {fileID: 11400000, guid: dd2f91f83cc52f84e9316d5c6634260c, type: 2}
 --- !u!1 &511498569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,7 +1161,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 100
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1320,6 +1337,7 @@ GameObject:
   - component: {fileID: 565800748}
   - component: {fileID: 565800747}
   - component: {fileID: 565800746}
+  - component: {fileID: 565800749}
   m_Layer: 5
   m_Name: "Menu Pontua\xE7\xE3o"
   m_TagString: Untagged
@@ -1409,6 +1427,21 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &565800749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565800744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 892fa37e24efa664d92e42dd288bf4b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "menuPontua\xE7ao": {fileID: 565800744}
+  menuInicial: {fileID: 1094739455}
+  "pontua\xE7ao": {fileID: 11400000, guid: 5f464dfdfc60f5449a4c48b1b4854f9b, type: 2}
 --- !u!1 &583812081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,7 +1470,7 @@ RectTransform:
   m_GameObject: {fileID: 583812081}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89, y: 0.89, z: 0.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1953527450}
   m_Father: {fileID: 927567741}
@@ -1491,7 +1524,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 583812084}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 927567745}
+        m_TargetAssemblyTypeName: MenuSelecionarDificuldade, Assembly-CSharp
+        m_MethodName: Facil
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &583812084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2259,6 +2304,7 @@ GameObject:
   - component: {fileID: 927567744}
   - component: {fileID: 927567743}
   - component: {fileID: 927567742}
+  - component: {fileID: 927567745}
   m_Layer: 5
   m_Name: Menu Dificuldade
   m_TagString: Untagged
@@ -2351,6 +2397,22 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &927567745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927567740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb4899327454de43b349d46ab77d9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  palavras: {fileID: 11400000, guid: a8cf886ef8d29df4590548110e5e497e, type: 2}
+  "pontua\xE7ao": {fileID: 11400000, guid: 5f464dfdfc60f5449a4c48b1b4854f9b, type: 2}
+  menuDificuldade: {fileID: 927567740}
+  menuInicial: {fileID: 1094739455}
 --- !u!1 &928037592
 GameObject:
   m_ObjectHideFlags: 0
@@ -2379,7 +2441,7 @@ RectTransform:
   m_GameObject: {fileID: 928037592}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89, y: 0.89, z: 0.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 414129300}
   m_Father: {fileID: 927567741}
@@ -2433,7 +2495,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 928037595}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 927567745}
+        m_TargetAssemblyTypeName: MenuSelecionarDificuldade, Assembly-CSharp
+        m_MethodName: Voltar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &928037595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2571,7 +2645,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 432682191}
+        m_TargetAssemblyTypeName: "MenuConfigura\xE7ao, Assembly-CSharp"
+        m_MethodName: SetFonteTamanho
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &936764218
 MonoBehaviour:
@@ -2659,10 +2745,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 910, y: 630}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2843,7 +2929,7 @@ RectTransform:
   m_GameObject: {fileID: 1023386954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89, y: 0.89, z: 0.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1441890674}
   - {fileID: 1630857390}
@@ -3024,7 +3110,7 @@ RectTransform:
   m_GameObject: {fileID: 1061531987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89, y: 0.89, z: 0.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 732193370}
   m_Father: {fileID: 1094739456}
@@ -3078,7 +3164,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1061531990}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1094739460}
+        m_TargetAssemblyTypeName: MenuInicial, Assembly-CSharp
+        m_MethodName: "Configura\xE7ao"
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1061531990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3439,8 +3537,8 @@ RectTransform:
   m_Father: {fileID: 1786590694}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3651,7 +3749,7 @@ RectTransform:
   m_GameObject: {fileID: 1322532404}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89, y: 0.89, z: 0.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1539822797}
   m_Father: {fileID: 927567741}
@@ -3705,7 +3803,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1322532407}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 927567745}
+        m_TargetAssemblyTypeName: MenuSelecionarDificuldade, Assembly-CSharp
+        m_MethodName: Medio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1322532407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4149,7 +4259,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 432682191}
+        m_TargetAssemblyTypeName: "MenuConfigura\xE7ao, Assembly-CSharp"
+        m_MethodName: SetNomeJogador
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -4252,7 +4374,7 @@ RectTransform:
   m_GameObject: {fileID: 1476225120}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89, y: 0.89, z: 0.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 821578312}
   m_Father: {fileID: 432682187}
@@ -4306,7 +4428,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1476225123}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 432682191}
+        m_TargetAssemblyTypeName: "MenuConfigura\xE7ao, Assembly-CSharp"
+        m_MethodName: Voltar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1476225123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4447,7 +4581,7 @@ RectTransform:
   m_GameObject: {fileID: 1532083071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89, y: 0.89, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1630637274}
   m_Father: {fileID: 927567741}
@@ -4663,7 +4797,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4924,13 +5058,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 1592200330}
   m_HandleRect: {fileID: 1168609361}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 432682191}
+        m_TargetAssemblyTypeName: "MenuConfigura\xE7ao, Assembly-CSharp"
+        m_MethodName: SetAudio
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1697435833
 GameObject:
   m_ObjectHideFlags: 0
@@ -4959,7 +5105,7 @@ RectTransform:
   m_GameObject: {fileID: 1697435833}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89, y: 0.89, z: 0.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1721593039}
   m_Father: {fileID: 927567741}
@@ -5013,7 +5159,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1697435836}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 927567745}
+        m_TargetAssemblyTypeName: MenuSelecionarDificuldade, Assembly-CSharp
+        m_MethodName: Dificil
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1697435836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5289,7 +5447,7 @@ RectTransform:
   m_GameObject: {fileID: 1730753122}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89, y: 0.89, z: 0.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 563583000}
   m_Father: {fileID: 565800745}
@@ -5343,7 +5501,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1730753125}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 565800749}
+        m_TargetAssemblyTypeName: "MenuPontua\xE7ao, Assembly-CSharp"
+        m_MethodName: Voltar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1730753125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5410,7 +5580,7 @@ RectTransform:
   m_GameObject: {fileID: 1753628827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89, y: 0.89, z: 0.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1438414825}
   m_Father: {fileID: 1094739456}
@@ -5464,7 +5634,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1753628830}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1094739460}
+        m_TargetAssemblyTypeName: MenuInicial, Assembly-CSharp
+        m_MethodName: "Pontua\xE7ao"
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1753628830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6114,7 +6296,7 @@ RectTransform:
   m_GameObject: {fileID: 1847582687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89, y: 0.89, z: 0.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1394934909}
   m_Father: {fileID: 1094739456}
@@ -6168,7 +6350,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1847582690}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1094739460}
+        m_TargetAssemblyTypeName: MenuInicial, Assembly-CSharp
+        m_MethodName: Jogar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1847582690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6234,7 +6428,7 @@ RectTransform:
   m_GameObject: {fileID: 1872669518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89, y: 0.89, z: 0.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 121116851}
   m_Father: {fileID: 565800745}
@@ -6310,7 +6504,7 @@ RectTransform:
   m_GameObject: {fileID: 1876479212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89, y: 0.89, z: 0.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 432682187}
   m_RootOrder: 2
@@ -6546,7 +6740,7 @@ RectTransform:
   m_GameObject: {fileID: 1940484710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89, y: 0.89, z: 0.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1830354253}
   - {fileID: 2036279748}

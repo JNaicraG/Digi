@@ -1,4 +1,6 @@
 using System.Collections;
+using UnityEngine.UIElements;
+using TMPro;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,6 +34,19 @@ public class MenuInicial : MonoBehaviour
     {
         configuraçao.CarregarDados();
     }
+    /*
+    public menuConfigIndex;
+    public menuConfigVolume;
+    public menuConfigNome;
+    private void SetConfiguraçao()
+    {
+        if (configuraçao.indexFonteTamanho > 0 && configuraçao.indexFonteTamanho < 0)
+            menuConfigIndex = configuraçao.indexFonteTamanho;
+        if (configuraçao.volume > -80 && configuraçao.volume < 0)
+            menuConfigVolume = configuraçao.volume;
+        if (configuraçao.nomeJogador != null)
+            menuConfigNome = configuraçao.nomeJogador;
+    }
 
-
+    */
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class MenuInicial : MonoBehaviour
 {
-
+    //public AudioSource audio;
     public GameObject menuInicial, menuPontuaçao, menuConfiguraçao, menuSeleçaoDeNivel;
     public void Jogar()
     {
@@ -30,9 +30,16 @@ public class MenuInicial : MonoBehaviour
     }
 
     public Configuraçao configuraçao;
+    public Pontuaçao pontuaçao;
+    private void Awake()
+    {
+        pontuaçao.CarregarPontuaçao();
+        configuraçao.CarregarDados();
+    }
+
     private void Start()
     {
-        configuraçao.CarregarDados();
+        AudioManager.Instance.Play("Música");
     }
     /*
     public menuConfigIndex;

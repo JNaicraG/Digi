@@ -8,9 +8,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Configuração", menuName = "ScriptableObjects/Configuração")]
 public class Configuraçao : ScriptableObject
 {
-    public string nomeJogador;
-    public float volume;
-    public int indexFonteTamanho; //0 - pequeno, 1 - medio, 2 - grande
+    public string nomeJogador = "Caju";
+    public float volume = 50;
+    public int indexFonteTamanho = 1; //0 - pequeno, 1 - medio, 2 - grande
     public AudioMixer audioMixer;
 
 

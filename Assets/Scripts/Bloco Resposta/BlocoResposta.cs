@@ -13,6 +13,7 @@ public class BlocoResposta : MonoBehaviour
     public bool BlocoCorreto { get => blocoCorreto; }
     [Tooltip("Velocidade para peça tomar posiçao do bloco de resposta correto ao entrar na colisao")]
     private float _speed = 100f;
+    public Pontuaçao pontos;
     private void OnTriggerStay2D(Collider2D collision)
     {
         //Debug.Log("Objeto entrou com nome: " + collision.gameObject.name.ToString());
@@ -26,13 +27,17 @@ public class BlocoResposta : MonoBehaviour
                 //Debug.Log("Silaba Peça: " + obj.GetComponent<Peça>().sil);
                 obj.GetComponent<Mover>().podeMover = false;
                 blocoCorreto = true; //bloco/peça correto
-                                      //obj.transform.position = Vector3.Lerp(obj.transform.position, transform.position, Time.deltaTime); //a posiçao dele se torna a deste bloco
+                                     //obj.transform.position = Vector3.Lerp(obj.transform.position, transform.position, Time.deltaTime); //a posiçao dele se torna a deste bloco
 
                 obj.transform.localPosition = Vector3.MoveTowards(obj.transform.localPosition, transform.localPosition + new Vector3(0, 2.42f, 0), _speed * Time.deltaTime); //0,4 no y tá compensando uma altura ae
                 //Vector3.MoveTowards(obj.transform.position, transform.position, _speed * Time.deltaTime);
+                pontos.AdicionarPontos();
             }
             else
+            {
+                pontos.DiminuirMultiplicador();
                 blocoCorreto = false;
+            }
         }
     }
 

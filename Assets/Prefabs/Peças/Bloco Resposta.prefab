@@ -146,3 +146,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   sil: 
+  blocoCorreto: 0
+  pontos: {fileID: 11400000, guid: 5f464dfdfc60f5449a4c48b1b4854f9b, type: 2}

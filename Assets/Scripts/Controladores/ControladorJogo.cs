@@ -49,13 +49,50 @@ public class ControladorJogo : MonoBehaviour
     {
         ContarTempo();
         ResetarEstadosDoJogo();
+        AlterarFonteTamanhoJogo();
         //controlarPalavras.CarregarPalavrasMedias();
     }
-
     private void Update()
     {
         VerificarBlocos();
         VerificarEstadoDoJogo();
+    }
+    public List<GameObject> menus = new List<GameObject>();
+    public GameObject pausa;
+    public Configuraçao configuraçao;
+    public void AlterarFonteTamanhoJogo()
+    {
+
+        switch (configuraçao.indexFonteTamanho)
+        {
+            case 0:
+
+                pausa.transform.localScale = new Vector3(0.79f, 0.79f, 1f);
+                foreach (var n in menus)
+                {
+                    n.transform.localScale = new Vector3(0.89f, 0.89f, 1f);
+                }//usar tamanho pequeno
+                break;
+            case 1:
+                pausa.transform.localScale = new Vector3(0.89f, 0.89f, 1f);
+                foreach (var n in menus)
+                {
+                    n.transform.localScale = new Vector3(1, 1f, 1f);
+                }
+                //usar tamanho médio
+                break;
+            case 2:
+                pausa.transform.localScale = new Vector3(1f, 1f, 1f);
+                foreach (var n in menus)
+                {
+                    n.transform.localScale = new Vector3(1.2f, 1.2f, 1f);
+                }
+                //usar tamanho grande
+                break;
+            default:
+                Debug.LogError("Index de tamanho selecionado para fonte é inválido");
+                break;
+        }
     }
     /*
     public void AcabarJogo()
@@ -70,6 +107,7 @@ public class ControladorJogo : MonoBehaviour
 
     private void ContarTempo()
     {
+        pontuaçao.t += Time.time;
         pontuaçao.tempo += Time.time;
     }
 

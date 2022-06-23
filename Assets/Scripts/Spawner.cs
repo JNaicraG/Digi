@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -63,7 +64,7 @@ public class Spawner : MonoBehaviour
         }
     }
 
-
+    public TMP_Text palavraChave;
     //(ArrayList pal)
     private void SpawnResposta() //Criar grid com blocos
     {
@@ -72,7 +73,7 @@ public class Spawner : MonoBehaviour
         ArrayList silabas = new ArrayList(); //Lista de silabas que sera carregada
         silabas = escolherPalavra.Silabas; //pegando silabas j´´a separadas
         _myGrid = escolherPalavra.nSilabas; //Configurando o tamanho horizontal da grid
-
+        palavraChave.text = escolherPalavra.PalavraChave;
         //for (int row = 1; row <= myGrid.y; row++) //coluna (no nosso caso 1, mas vai que)
         for (int col = 1; col <= _myGrid; col++) // para cada linha até o número delimitado de linhas
         {
